@@ -1,0 +1,276 @@
+In general (applies to all variables unless specified otherwise):
+    1 - yes/agree
+    2 - no/disagree
+    3 - doesn't apply to me
+    8 - don't know
+    9 - refused
+
+Variables
+    SAMPLE  :
+        Categories:
+            1 - Landline sample
+            2 - cellphone sample
+    INTUSE  : Do you use the internet, at least occasionally?
+    QL1     : Do you have a cell phone?
+    SMART3  : Is your cell phone a smartphone? (SAMPLE = 1 or QL1 = 1)
+    
+    if(INTUSE = 1 or SMART3 = 1)
+    PIAL1   : Which information about you is available in the internet for others to see. Doesn't matter who put it there.
+        Questions:
+            a) email address
+            b) home address
+            c) home phone number
+            d) cell phone number
+            e) employer or company you work for
+            f) political party affiliation
+            g) things you have written that have your name on it
+            h) photo of you
+            i) video of you
+            j) groups or organizations you belong to
+            k) birth date
+    PIAL3   : For each of the following, how much do you care that only you and those
+                you authorize shold have access to the following kinds of information?
+        Questions:
+            a) websites you browse
+            b) current location when you use the internet
+            c) content and files you download
+            d) times of the day you are online
+            e) applications or programs you use
+            f) searches you perform
+            g) content of your email
+            h) people you exchange email with
+            i) content of your online chats or hangouts with others
+        Categories:
+            1) very important
+            2) somewhat important
+            3) not too important
+            4) not at all important
+            5) doesn't apply to me
+            8) don't know
+            9) refused
+    PIAL4   : do you think it's possible to use the internet completely anonymously so
+                none of their online activities can be easily traced back to them?
+    PIAL5   : have you ever tried to use the internet in a way that hides or masks your
+                identity from certain people or organizations?
+    PIAL6   : do you ever post comments, questions, or information on the internet
+                _____?
+        Questions:
+            a) using your real name
+            b) using a username or screen name that people associate with you
+            c) without revealing who you are
+    PIAL7   : while using the internet, have you ever done any of the following?
+        Question:
+            a) used a temporary username or email address
+            b) used a fake name or untraceable username
+            c) given inaccurate or misleading information about yourself
+            d) set your browser to disable or turn off cookies
+            e) cleared cookies and browser history
+            f) used a service that allows you to browse the web anonymously (eg. proxy server, Tor software, VPN)
+            g) encrypted your communications
+            h) decided not to use a website because they asked for your real name
+            i) deleted or edited something you posted in the past
+            j) asked someone to remove something that was posted about you online
+            k) used a public computer to browse anonymously
+    PIAL8   : have you ever tried to use the internet in ways that keep ____ from being able to see what you have
+                read, watched or posted online?
+        Question;
+            a) family members or a romantic partner
+            b) certain friends
+            c) employer, supervisor or coworkers
+            d) companies or people who run the website you visited
+            e) hackers or criminals
+            f) law enforcement
+            g) people who might criticize, harass, or target you
+            h) companies of or people that might want payment for the files you download
+            i) people from your past
+            j) advertisers
+            k) the government
+    WEB1-A  : do you ever use the internet to do the following?
+        Question:
+            ACT87   : use a social networking site like facebook, linkedln, google plus
+            ACT112  : use twitter
+
+    if(ACT87 = 1 or ACT112 = 1)
+    PIAL9   : do you ever do the following?
+        Question:
+            a) change the privacy settings for your profile to limit what you share with others online
+            b) keep some people from seeing certain updates
+            c) delete people from your network or friend's list
+            d) remove your name from photos that have been tagged to identify you
+            e) delete comments that others have made on your profile
+            f) ask someone to remove information about you on social media, including pictures or videos
+            g) have different profiles for communicating with different people
+            h) ignore or refuse friend requests
+            i) block or unfriend someone
+            j) delete or edit something you posted in the past
+
+    if(INTUSE=1 or SMART3=1)
+    PIAL10  : suppose you said something critical about a product online and you didn't use
+                your real name. how easy do you think it would be for the company to find out
+                who you are anyway?
+        Categories:
+            1) very easy
+            2) somewhat easy
+            3) not too easy
+            4) almost impossible
+            8,9 - same
+    PIAL11  : have you ever had any of these experiences as a result of your online activities?
+        Question:
+            a) had important personal information stolen such as (eg. Social Security Number,
+                credit card, bank account information)
+            b) had an email or social networking account of yours compromised or taken over without
+                your permission
+            c) been the victim of an online scam and lost money
+            d) been stalked or harassed online
+            e) lost a job opportunity or educational opportunity because of something you posted
+                online or someone posted about you online
+            f) experience trouble in a relationship between you and a family member or a friend because
+                of something you posted online
+            g) had your reputation damaged because of something that happened online
+            h) something happened online that led you into physical danger
+
+    
+    PIAL12  : Do you think the laws provide protections of people's privacy about their
+                online activities?
+        Categories:
+            1) reasonable protection
+            2) not good enough
+            8, 9 - same
+    PIAL13  : do you think that people should have the ability to use the internet completely
+                anonymously for certain kinds of online activities?
+
+    Demographics
+        SEX
+            1) male
+            2) female
+        EMPLOY
+            1) Employed full-time
+            2) Employed part-time
+            3) not employed
+            8) other
+            9) refused
+        AGE
+            ___ exact
+            97) >= 97
+            98) don't know
+            99) refused
+        MARITAL
+            1) married
+            2) living with a partner
+            3) divorced
+            4) separated
+            5) widowed
+            6) never been married
+            8,9 - same
+        PAR : are you the parent or guardian of any children under 18 years of age?
+        HH1 : how many adults currently live in your household (including self)
+            __ exact
+            6) 6 or greater
+            8, 9 - same
+        EDUC2   : highest level of school completed
+            1) < HS
+            2) HS inc
+            3) HS grad
+            4) College inc
+            5) 2y associate degree
+            6) 4y college/university/bachelor's degree
+            7) post grad/professional inc
+            8) post grad/professional degree
+            98) don't know
+            99) refused
+        HISP    : Hispanic/Latino/other Spanish background?
+        RACE    :
+            1) White
+            2) Black or African-American
+            3) Asian or Pacific Islander
+            4) Mixed race
+            5) Native American/American Indian
+            6) Other (SPECIFY)
+            8) Don’t know
+            9) Refused
+
+
+Frequencies
+    PIAL1
+                            pial1a      pial1b      pial1c      pial1d     pial1e      pial1f      pial1g      pial1h      pial1i      pial1j      pial1k
+        yes             0.465909091 0.319444444 0.247474747 0.222222222 0.41666667 0.202020202 0.366161616 0.614898990 0.185606061 0.289141414 0.465909091
+        no              0.219696970 0.449494949 0.550505051 0.578282828 0.41540404 0.632575758 0.486111111 0.323232323 0.724747475 0.563131313 0.372474747
+        doesn't apply   0.011363636 0.002525253 0.050505051 0.022727273 0.10858586 0.017676768 0.011363636 0.002525253 0.002525253 0.030303030 0.002525253
+        not sure        0.299242424 0.223484848 0.146464646 0.174242424 0.05934343 0.146464646 0.135101010 0.056818182 0.085858586 0.112373737 0.156565657
+        refused         0.003787879 0.005050505 0.005050505 0.002525253 0.00000000 0.001262626 0.001262626 0.002525253 0.001262626 0.005050505 0.002525253
+
+    
+    PIAL2
+            yes         no        not sure      refused
+        0.487373737 0.510101010 0.002525253 0.000000000
+
+    PIAL3
+                          pial3a      pial3b      pial3c      pial3d      pial3e      pial3f      pial3g      pial3h      pial3i
+        very imp        0.452020202 0.536616162 0.547979798 0.335858586 0.412878788 0.453282828 0.674242424 0.619949495 0.491161616
+        somewhat imp    0.239898990 0.159090909 0.191919192 0.171717172 0.262626263 0.243686869 0.141414141 0.162878788 0.123737374
+        not too imp     0.275252525 0.268939394 0.204545455 0.444444444 0.276515152 0.262626263 0.146464646 0.160353535 0.212121212
+        not at all imp  0.013888889 0.020202020 0.012626263 0.027777778 0.017676768 0.015151515 0.013888889 0.016414141 0.027777778
+        doesn't apply   0.015151515 0.008838384 0.035353535 0.010101010 0.017676768 0.020202020 0.021464646 0.036616162 0.137626263
+        don't know      0.001262626 0.005050505 0.006313131 0.008838384 0.007575758 0.003787879 0.001262626 0.002525253 0.003787879
+        refused         0.002525253 0.001262626 0.001262626 0.001262626 0.005050505 0.001262626 0.001262626 0.001262626 0.003787879
+    PIAL4
+            yes         no        not sure      refused
+        0.351010101 0.599747475 0.041666667 0.007575758
+    PIAL5
+            yes         no        not sure      refused
+        0.161616162 0.828282828 0.007575758 0.002525253
+    PIAL6
+                            pial6a      pial6b      pial6c
+        yes             0.472222222 0.421717172 0.226010101
+        no              0.484848485 0.550505051 0.738636364
+        doesn't apply   0.032828283 0.022727273 0.029040404
+        not sure        0.008838384 0.003787879 0.006313131
+        refused         0.001262626 0.001262626 0.000000000
+    PIAL7
+                            pial7a      pial7b      pial7c      pial7d      pial7e
+        yes             0.239898990 0.148989899 0.118686869 0.420454545 0.626262626
+        no              0.748737374 0.833333333 0.864898990 0.516414141 0.337121212
+        doesn't apply   0.006313131 0.010101010 0.006313131 0.008838384 0.007575758
+        not sure        0.005050505 0.007575758 0.008838384 0.054292929 0.029040404
+        refused         0.000000000 0.000000000 0.001262626 0.000000000 0.000000000
+                            pial7f      pial7g      pial7h     pial7i      pial7j      pial7k
+        yes             0.130050505 0.146464646 0.359848485 0.36237374 0.165404040 0.171717172
+        no              0.829545455 0.786616162 0.617424242 0.60101010 0.815656566 0.814393939
+        doesn't apply   0.013888889 0.011363636 0.015151515 0.02272727 0.012626263 0.008838384
+        not sure        0.025252525 0.051767677 0.007575758 0.01388889 0.006313131 0.005050505
+        refused         0.001262626 0.003787879 0.000000000 0.00000000 0.000000000 0.000000000
+
+    PIAL8
+                            pial8a      pial8b      pial8c     pial8d      pial8e
+        yes             0.106060606 0.146464646 0.092171717 0.06439394 0.327020202
+        no              0.883838384 0.840909091 0.861111111 0.90277778 0.613636364
+        doesn't apply   0.006313131 0.007575758 0.039141414 0.01010101 0.017676768
+        not sure        0.003787879 0.005050505 0.007575758 0.02272727 0.039141414
+        refused         0.000000000 0.000000000 0.000000000 0.00000000 0.002525253
+                            pial8f      pial8g      pial8h      pial8i      pial8j      pial8k
+        yes             0.035353535 0.146464646 0.060606061 0.143939394 0.272727273 0.041666667
+        no              0.949494949 0.808080808 0.873737374 0.834595960 0.700757576 0.928030303
+        doesn't apply   0.008838384 0.032828283 0.063131313 0.008838384 0.012626263 0.008838384
+        not sure        0.005050505 0.011363636 0.001262626 0.011363636 0.012626263 0.016414141
+        refused         0.001262626 0.001262626 0.001262626 0.001262626 0.001262626 0.005050505
+    PIAL9
+                    pial9a     pial9b      pial9c      pial9d     pial9e
+                    [1,] 0.65478424 0.38649156 0.617260788 0.260787992 0.25515947
+                    [2,] 0.33771107 0.60600375 0.378986867 0.737335835 0.73733583
+                    [3,] 0.00750469 0.00750469 0.003752345 0.001876173 0.00750469
+                    [4,] 0.00000000 0.00000000 0.000000000 0.000000000 0.00000000
+                    pial9f      pial9g      pial9h      pial9i      pial9j
+                    [1,] 0.196998124 0.108818011 0.842401501 0.607879925 0.457786116
+                    [2,] 0.797373358 0.889305816 0.155722326 0.390243902 0.532833021
+                    [3,] 0.005628518 0.001876173 0.001876173 0.001876173 0.009380863
+                    [4,] 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000
+
+
+
+background
+    social networking
+    sync (browser history, etc)
+
+correlation:
+    mga gumagamit ng social networking tapos mga naglalabas ng email, photos, birthdate sa net
+
