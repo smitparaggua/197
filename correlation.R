@@ -41,16 +41,27 @@ a = which(related.cols == related.rows)
 related.cols = related.cols[-a]
 related.rows = related.rows[-a]
 
-# get names of the rows and columns
-a = colnames(data.pial.chi)
-b = rownames(data.pial.chi)
+# get names of the rows and columns, p-value, Cramer's V
+names.col = colnames(data.pial.chi)
+names.row = rownames(data.pial.chi)
 related.rows.names = array(dim=length(related.rows))
 related.cols.names = array(dim=length(related.cols))
+related.cramers = array(dim=length(related.rows))
+related.contingency = array(dim=length(related.rows))
+related.phi = array(dim=length(related.rows))
 for(i in 1:length(related.rows)) {
-    related.cols.names[i] = a[related.cols[i]]
-    related.rows.names[i] = b[related.rows[i]]
+    related.cols.names[i] = names.col[related.cols[i]]
+    related.rows.names[i] = names.row[related.rows[i]]
+    a = data.pial[,related.rows[i]]
+    b = data.pial[,related.cols[i]]
+    c = assocstats(table(a,b,exclude=c(8,9)))
+    related.phi[i] = c$phi;
+    related.cramers[i] = c$cramer;
+    related.contingency[i] = c$contingency;
 }
-relatedVars = rbind(related.cols.names,related.rows.names, data.pial.chi[related]);
+relatedVars = rbind(related.cols.names,related.rows.names, related.phi, related.cramers, related.contingency);
+rownames(relatedVars) = c("data1", "data2", "phi-coefficient", "cramer's V", "contingency coeff")
+relatedVars = relatedVars[, order(relatedVars[4,], decreasing = T)]
 
 # for verification
 a = array(dim=length(related))
@@ -62,6 +73,5 @@ for(i in 1:length(related)) {
 a = data.pial[,related.rows[2]]
 b = data.pial[,related.cols[2]]
 c = assocstats(table(a,b,exclude=c(8,9)))
-relatedVars = relatedVars[]
 
 a = cor(data.pial, method = "kendall")

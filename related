@@ -1,0 +1,100 @@
+1, 7
+    1) what info is public
+        a) email
+        b) home add
+        h) photo
+        i) video
+        k) birth date
+    7) things you can do to hide identity
+        a) used a temporary username or email address
+        b) used a fake name or untraceable username
+        c) given inaccurate or misleading information about yourself
+        d) set your browser to disable or turn off cookies
+        e) cleared cookies and browser history
+        f) used a service that allows you to browse the web anonymously (eg. proxy server, Tor software, VPN)
+        g) encrypted your communications
+        h) decided not to use a website because they asked for your real name
+        i) deleted or edited something you posted in the past
+        j) asked someone to remove something that was posted about you online
+        k) used a public computer to browse anonymously
+    Associated vars
+        a - c
+        b - [a - g, k]
+        h - [a - k]
+        i - [a - k]
+        k - [a - k]
+
+7, 8
+    7) things you can do to hide identity
+    8) hiding info to some people
+
+1, 8
+    1) what info is public
+    8) hiding info to some people
+
+1, 3
+    1) what info is public
+    3) only authorized can see info
+
+1, 9
+    1) what info is public
+    9) hiding info in social networking
+        h) ignore or refuse friend request
+    Associated subvars
+        h - [a - j]
+
+3, 8
+    3) only authorized can see info
+    8) hiding info to some people
+
+3, 7
+    3) only authorized can see info
+    7) things you can do to hide identity
+
+7, 9
+    7) things you can do to hide identity
+    9) hiding info in social networking
+
+6, 7
+    6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
+    7) things you can do to hide identity
+
+6, 8
+    6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
+    8) hiding info to some people
+
+8, 11
+    8) hiding info to some people
+    11) bad experience caused by online activity
+
+9, 11
+    9) hiding info in social networking
+    11) bad experience caused by online activity
+
+5
+    5) use internet that hides identity to certain people/organizations
+    7b) used fake name or untreaceable username
+    7f) anonymity services
+
+6, 9
+    6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
+    9) hiding info in social networking
+
+
+Relation between questions
+    public info
+        1) what info is public
+        2) worry how much info about you in internet
+    limited access info
+        3) only authorized can see info
+        8) hiding info to some people
+    Belief
+        4) possibility of anonymity
+        10) how easy to be tracked
+    Bad effect
+        11) bad experience caused by online activity
+    Effort
+        5) use internet that hides identity to certain people/organizations
+        6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
+        7) things you can do to hide identity
+        9) hiding info in social networking
