@@ -1,3 +1,17 @@
+Social networking user vs public info
+    snUser - pial1h
+    snUser - pial1k
+
+8, 11
+    8) hiding info to some people
+        i) people from your past
+        b) certain friends
+    11) bad experience caused by online activity
+        d) stalked or harassed online
+    related
+        + i - d (0.337)
+        + b - d (0.301)
+
 1, 7
     1) what info is public
         a) email
@@ -24,6 +38,23 @@
         i - [a - k]
         k - [a - k]
 
+9, 11
+    9) hiding info in social networking
+        i) block or unfriend someone
+    11) bad experience caused by online activity
+        f) experience trouble in a relationship between you and a family member or a
+        friend because of something you posted online
+    related
+        i - f (0.309)
+
+6, 9
+    6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
+        b) using a username or screen name that people associate with you
+    9) hiding info in social networking
+        j) delete or edit something you posted in the past
+    related
+        b - j
+
 7, 8
     7) things you can do to hide identity
     8) hiding info to some people
@@ -38,10 +69,33 @@
 
 1, 9
     1) what info is public
+        h) photo
     9) hiding info in social networking
-        h) ignore or refuse friend request
+        a) change the privacy settings for your profile to limit what you share with others online
+        b) keep some people from seeing certain updates
+        c) delete people from your network or friend's list
+        d) remove your name from photos that have been tagged to identify you
+        e) delete comments that others have made on your profile
+        f) ask someone to remove information about you on social media, including pictures or videos
+        g) have different profiles for communicating with different people
+        h) ignore or refuse friend requests
+        i) block or unfriend someone
+        j) delete or edit something you posted in the past
     Associated subvars
-        h - [a - j]
+        + h - a
+        - h - b
+        + h - c
+        - h - d
+        - h - e
+        - h - f
+        - h - g
+        + h - h
+        + h - i
+        - h - j
+    Additional note
+        social networking users vs public photos
+            social networking users in data: 533
+            social networking users sharing their photos in public: 425 (~80%)
 
 3, 8
     3) only authorized can see info
@@ -53,7 +107,18 @@
 
 7, 9
     7) things you can do to hide identity
+        i) deleted or edited something you posted in the past
+        j) asked someone to remove something that was posted about
     9) hiding info in social networking
+        i - a
+        i - b
+        i - c
+        i - d
+        i - e
+        i - f
+        i - i
+        j - e
+        j - f
 
 6, 7
     6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
@@ -63,22 +128,10 @@
     6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
     8) hiding info to some people
 
-8, 11
-    8) hiding info to some people
-    11) bad experience caused by online activity
-
-9, 11
-    9) hiding info in social networking
-    11) bad experience caused by online activity
-
 5
     5) use internet that hides identity to certain people/organizations
     7b) used fake name or untreaceable username
     7f) anonymity services
-
-6, 9
-    6) identifier when posting comments, questions, info (eg. real name, associated username, ...)
-    9) hiding info in social networking
 
 
 Relation between questions

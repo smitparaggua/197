@@ -75,3 +75,18 @@ b = data.pial[,related.cols[2]]
 c = assocstats(table(a,b,exclude=c(8,9)))
 
 a = cor(data.pial, method = "kendall")
+
+
+# compute for social networking users
+snUser = 1:nrow(data);
+snUser[which(data$act87 == 1 | data$act112 == 1)] = 1;
+snUser[which(data$act87 != 1 & data$act112 != 1)] = 2;
+# number of social networking users sharing their photos
+length(which(snUser == 1 & data$pial1h == 1))
+# association for pial1 and snUser
+a = apply(data[,grep("pial1[a-z]", names(data))], 2, table, snUser)
+b = lapply(a,assocstats)
+
+# for checking for relations
+a = "pial11"
+relatedVars[,c(grep(a,relatedVars[1,]), grep(a, relatedVars[2, ]))]
