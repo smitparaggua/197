@@ -1,0 +1,137 @@
+interpreting strength of association (Cramer's V)
+    depends on researcher (no clear standard)
+    based on: http://www.usca.edu/polisci/apls301/Text/Chapter%2012.%20Significance%20and%20Measures%20of%20Association.htm
+    very weak: 0 to 0.1
+    weak association: 0.1 to 0.2
+    moderate association: 0.2 to 0.3
+    strong association: 0.3 to 1
+
+
+Social networking and public info (snUser - pial1)
+    social networking users vs public photos
+        social networking users in data: 533
+        social networking users sharing their photos in public: 425 (~80%)
+    top most associated
+        strong 
+            pial1h 
+                photo
+                cramer's V: 0.54
+            pial1k
+                birth date
+                cramer's V: 0.332
+        moderate
+            pial1e
+                employee or company you work for
+                cramer's V: 0.269
+            pial1i
+                video of you
+                cramer's V: 0.261
+            pial1g
+                things you have written with your name on it
+                photos could be more public for social networking
+                    because of privacy settings
+                cramer's V: 0.254
+            pial1j
+                groups or organizations you belong to
+                cramer's V: 0.242
+            pial1a
+                email address
+                cramer's V: 0.216
+
+social networking user vs posting questions, comments, information on internet
+    Strong 
+        pial6a
+            using your real name
+            cramer's V: 0.401
+            could be related to facebook terms and conditions
+        pial6b
+            using a username or screen name that people associate with you
+            cramer's V: 0.343
+            could be related to twitter users, or users that use other names
+                instead of real names but not for the purpose of hiding their
+                identities (Shinji Lumiere)
+    Moderate
+        pial6c
+            without revealing who you are
+            cramer's V: 0.253
+            TODO since sinasabi lang ng cramer's V is how strong is association,
+                di ko alam kung yes yung isa, yes din yung kabila
+                though mas malaki yung disagree sila (372 vs 392)
+
+social networking and care that only authorized can see the info (pial3)
+    pial3a
+        websites browsed
+        0.223
+    pial3g
+        content of email
+        0.234
+    pial3h
+        people you exchange email with
+        0.247
+    pial3i
+        content of your online chats or hangouts with others
+        0.321
+
+social networking and the bad guys (pial8)
+    Have  you  ever  tried  to  use  the  internet  in  ways  that  keep the following from being able to see what you have read, watched or posted online?
+    pial8i
+        people from your past
+        0.241
+        it's more likely for social networking users to hide the info compared to respondents that don't use social networking
+    pial8b
+        certain friends
+        0.237
+        it's more likely for social networking users to hide the info compared to respondents that don't use social networking
+    pial8c
+        employer, supervisor or coworkers
+        0.233
+        it's more likely for social networking users to hide the info compared to respondents that don't use social networking
+    pial8e
+        hackers or criminals
+        0.222
+        it's more likely for social networking users to hide the info compared to respondents that don't use social networking
+    pial8j
+        advertisers
+        0.226
+        it's more likely for social networking users to hide the info compared to respondents that don't use social networking
+
+social networking and (pial7i,j)
+    While using the internet, have you ever done any of the following things?
+    pial7i
+        deleted or edited something you posted in the past
+        0.37
+        social networking users are more likely to do it than respondents that don't use social networking sites
+    pial7j
+        asked someone to remove something that was posted about you online
+        0.203
+        social networking users are more likely to do it than respondents that don't use social networking sites
+
+bad guys and bad effect (pial8 - pial11)
+    Have  you  ever  tried  to  use  the  internet  in  ways  that  keep the following from being able to see what you have read, watched or posted online?
+    pial8i - pial11b
+        0.202
+        companies that might want payment from files you downloaded - 
+    pial8e - pial11b
+        0.206
+    pial8k - pial11d
+        0.204
+    pial8i - 11d
+        0.237
+    8b - 11d
+        0.214
+    8j - 11e
+        0.202
+    8h - 11e
+        0.321
+    8i - 11g
+        0.255
+    8d - 11g
+        0.217
+    8h - 11h
+        0.215
+    8g - 11h
+        0.203
+    8f - 11h
+        0.249
+    8d - 11h
+        0.258

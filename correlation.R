@@ -13,9 +13,10 @@ chiSquared <- function(x, y, exclude=NA) {
 }
 
 data.raw = read.csv("anonymity_clean.csv", row.names = 1)
+data = toNumeric(data.raw)
+data = as.data.frame(data)
 
 data.pial = data[,grep("pial", names(data))]
-data.pial = toNumeric(data.pial)
 
 # pial4 pial5
 a = chiSquared(data.pial[,23], data.pial[,24], exclude=c(8,9))
@@ -83,9 +84,15 @@ snUser[which(data$act87 == 1 | data$act112 == 1)] = 1;
 snUser[which(data$act87 != 1 & data$act112 != 1)] = 2;
 # number of social networking users sharing their photos
 length(which(snUser == 1 & data$pial1h == 1))
-# association for pial1 and snUser
-a = apply(data[,grep("pial1[a-z]", names(data))], 2, table, snUser)
-b = lapply(a,assocstats)
+# association for 2 variables
+# for individual
+a = table(data$pial5, data$pial12)
+assocstats(a)
+apply(a, 2, prop.table)
+# for group
+a = apply(data[,grep("pial8[a-z]", names(data))], 2, table, snUser)
+lapply(a,assocstats)
+apply(a$pial7i, 2, prop.table)
 
 # for checking for relations
 a = "pial11"
