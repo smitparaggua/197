@@ -6,6 +6,19 @@ interpreting strength of association (Cramer's V)
     moderate association: 0.2 to 0.3
     strong association: 0.3 to 1
 
+    based on: http://groups.chass.utoronto.ca/pol242/Labs/LM-3A/LM-3A_content.htm
+    LEVEL OF ASSOCIATION    Verbal Description        COMMENTS
+    0.00                    No Relationship           Knowing the independent variable does not help in predicting the dependent variable.
+    .00 to .15              Very Weak                 Not generally acceptable
+    .15 to .20              Weak                      Minimally acceptable
+    .20 to .25              Moderate                  Acceptable
+    .25 to .30              Moderately Strong         Desirable
+    .30 to .35              Strong                    Very Desirable
+    .35 to .40              Very Strong               Extremely Desirable
+    .40 to .50              Worrisomely Strong        Either an extremely good relationship or the two variables are measuring the same concept
+    .50 to .99              Redundant                 The two variables are probably measuring the same concept.
+    1.00                    Perfect Relationship.     If we the know the independent variable, we can perfectly predict the dependent variable. 
+
 
 Social networking and public info (snUser - pial1)
     social networking users vs public photos
@@ -107,31 +120,72 @@ social networking and (pial7i,j)
         social networking users are more likely to do it than respondents that don't use social networking sites
 
 bad guys and bad effect (pial8 - pial11)
-    Have  you  ever  tried  to  use  the  internet  in  ways  that  keep the following from being able to see what you have read, watched or posted online?
-    pial8i - pial11b
-        0.202
-        companies that might want payment from files you downloaded - 
-    pial8e - pial11b
-        0.206
-    pial8k - pial11d
-        0.204
-    pial8i - 11d
-        0.237
-    8b - 11d
-        0.214
-    8j - 11e
-        0.202
-    8h - 11e
-        0.321
-    8i - 11g
-        0.255
-    8d - 11g
-        0.217
-    8h - 11h
-        0.215
-    8g - 11h
-        0.203
-    8f - 11h
-        0.249
-    8d - 11h
-        0.258
+    8) Have  you  ever  tried  to  use  the  internet  in  ways  that  keep the following from being able to see what you have read, watched or posted online?
+    11) As far as you know, have you ever had any of these experiences as a result of you online activities?
+    things that made sense
+        8h - 11e
+            0.321
+            8h) companies that might want payment from files you downloaded
+            11e) lost a job opportunity because of something you posted online or someone posted about you
+            * more people don't hide info from companies that might want payment from files they downloaded
+            * people who lost a job opportunity because of something they posted online are more likely to hide the info
+                from (8h) than people who didn't
+        8i - 11g
+            0.255
+            8i) people from your past
+            11g) had your reputation damaged because of something that happened online
+            * 8i is more or less 50 - 50
+            * it's more likely for people who (11g) to hide info from (8i) 
+        8f - 11h
+            0.249
+            8f) law enforcement
+            11h) something happened online that led you into physical danger
+            * 8f: 53 - 43
+            * it's more likely for people who (11h) to hide info from (8f)
+                * parang baliktad. haha
+        pial8i - 11d
+            0.237
+            8i) people from your past
+            11d) stalked or harassed online
+            * 8i: 53 - 43
+            * people who have been stalked/harassed online are more likely to avoid some people from their past from seeing some info
+        8b - 11d
+            0.214
+            8b) certain friends
+            11d) stalked or harassed online
+            * people who have been stalked/harassed online are more likely to avoid certain friends from seeing some info
+        pial8e - pial11b
+            0.206
+            8e) hackers or criminals
+            11b) had an email or social networking account of yours compromised or taken over without your permission
+            * people who have been stalked/harassed online are more likely to avoid hackers/criminals from seeing some info
+        pial8i - pial11b
+            0.202
+            8i) people from your past
+            11b) had an email or social networking account of yours compromised or taken over without your permission
+            * people who (11b) are more likely to keep certain from their past from seeing some info
+    things that didn't
+        pial8k - pial11d
+            0.204
+            8k) the government
+            11d) stalked or harassed online
+        8j - 11e
+            0.202
+            8j) advertisers
+            11e) lost a job opportunity because of something you posted online or someone posted about you
+        8d - 11g
+            0.217
+            8d) companies or people who run the website you visited
+            11g) had your reputation damaged because of something that happened online
+        8h - 11h
+            0.215
+            8h) companies that might want payment from files you downloaded
+            11h) something happened online that led you into physical danger
+        8g - 11h
+            0.203
+            8g) people who might criticize, harass, or target you
+            11h) something happened online that led you into physical danger
+        8d - 11h
+            0.258
+            8d) companies or people who run the website you visited
+            11h) something happened online that led you into physical danger

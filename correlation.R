@@ -86,7 +86,7 @@ snUser[which(data$act87 != 1 & data$act112 != 1)] = 2;
 length(which(snUser == 1 & data$pial1h == 1))
 # association for 2 variables
 # for individual
-a = table(data$pial5, data$pial12)
+a = table(data$pial8i, data$pial11g)
 assocstats(a)
 apply(a, 2, prop.table)
 # for group

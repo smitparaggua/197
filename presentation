@@ -1,0 +1,45 @@
+Background of the Study
+
+Problem Statement
+    What informations are more likely to be shared by social networking site users?
+    How does most people hide information about their online activities?
+    To which kinds of threats 
+    ^ not specific enough
+
+    In what ways does social networking affect anonymity of users?
+        What info are more likely to go out when respondents are social networking site users?
+    Are social networking users more prone to encountering problems as a result of their online activities?
+    What are some of the reasons people don't go anonymous despite its importance?
+
+(Theoretical) Framework of the Study
+
+Proposed Solution
+
+About the Data
+
+Methodology
+
+    Cramer's V for computing level of association
+    based on: http://groups.chass.utoronto.ca/pol242/Labs/LM-3A/LM-3A_content.htm
+    LEVEL OF ASSOCIATION    Verbal Description        COMMENTS
+    0.00                    No Relationship           Knowing the independent variable does not help in predicting the dependent variable.
+    .00 to .15              Very Weak                 Not generally acceptable
+    .15 to .20              Weak                      Minimally acceptable
+    .20 to .25              Moderate                  Acceptable
+    .25 to .30              Moderately Strong         Desirable
+    .30 to .35              Strong                    Very Desirable
+    .35 to .40              Very Strong               Extremely Desirable
+    .40 to .50              Worrisomely Strong        Either an extremely good relationship or the two variables are measuring the same concept
+    .50 to .99              Redundant                 The two variables are probably measuring the same concept.
+    1.00                    Perfect Relationship.     If we the know the independent variable, we can perfectly predict the dependent variable. 
+
+Results
+    widespread use of HTTPS because of convenience. no addtional setup for clients.
+    on most cases, secure enough na ang HTTPS para sa basic users
+
+    In what ways does social networking affect anonymity of users?
+        What info are more likely to go out when respondents are social networking site users?
+    Are social networking users more prone to encountering problems as a result of their online activities?
+    What are some of the reasons people don't go anonymous despite its importance?
+        kasi hassle.
+        even though prone sila sa government snooping, most people don't even 

@@ -40,7 +40,7 @@ saveBarplot <- function(data, filename, main=NULL, names.arg=NULL, legendNames=N
     }
 }
 
-createPlotAndGetFrequency <- function(data, namePattern, choices, names=NULL, ...) {
+createPlotAndGetFrequency <- function(data, namePattern, choices, names=NULL, main=NULL, ...) {
     data = data[,grep(namePattern, names(data))];
     if(is.null(dim(data))) {
         data.frequency = getFrequencyPercentageOfSequence(data, choices);
@@ -48,7 +48,7 @@ createPlotAndGetFrequency <- function(data, namePattern, choices, names=NULL, ..
         data.frequency = apply(X=data, MARGIN=2, FUN=getFrequencyPercentageOfSequence, choices);
         #names = NULL;
     }
-    saveBarplot(data.frequency, filename=namePattern, main=namePattern, names.arg=names, legendNames=legendNames);
+    saveBarplot(data.frequency, filename=namePattern, main=main, names.arg=names, legendNames=legendNames);
     return(data.frequency);
 }
 
@@ -79,27 +79,41 @@ names = NULL;
 namesToPlot = c("pial3[a-c]", "pial3[d-f]", "pial3[g-i]");
 names$'pial3[a-c]' = c("websites\nbrowsed", "location while\nusing net", "content\ndownloaded");
 names$'pial3[d-f]' = c("times of\nday online", "applications/programs\nyou use", "search\nhistory");
-names$'pial3[g-i]' = c("content of\nemail", "people exchange\nemail with", "content of\nchats/hangouts");
+names$'pial3[g-i]' = c("content of\nemail", "people you exchange\nemail with", "content of\nchats/hangouts");
+mainLabels = namesToPlot;
+mainLabels$'pial3[a-c]' = c("How much do you care that only you and those you\nauthorize should have access to the following information?");
+mainLabels$'pial3[d-f]' = mainLabels$'pial3[a-c]';
+mainLabels$'pial3[g-f]' = mainLabels$'pial3[a-c]';
 choices = c(1,2,3,4,5,8,9);
 legendNames = c("very important", "somewhat important", "not too important", "not at all important", "doesn't apply", "not sure", "refused");
 for(i in namesToPlot) {
-    data.frequency[[i]] = createPlotAndGetFrequency(data, namePattern=i, choices=choices, legendNames=legendNames, names=names[[i]]);
+    data.frequency[[i]] = createPlotAndGetFrequency(data, namePattern=i, choices=choices, legendNames=legendNames, names=names[[i]], main=mainLabels[[i]]);
 }
 
 namesToPlot = c("pial1[a-d]", "pial1[e-h]","pial1[i-k]", "pial6", "pial7[a-d]", "pial7[e-h]","pial7[i-k]", "pial8[a-d]", "pial8[e-h]","pial8[i-k]");
-names$'pial1[a-d]' = c("email", "home add", "home phone", "cell phone");
-names$'pial1[e-h]' = c("employer", "pol aff", "written", "photo");
-names$'pial1[i-k]' = c("video", "org",  "b-date")
+names$'pial1[a-d]' = c("email\naddress", "home\naddress", "home phone\nnumber", "cell phone\nnumber");
+names$'pial1[e-h]' = c("employer or company\nyou work for", "political party\naffiliation", "written with your\nname on it", "photo\nof you");
+names$'pial1[i-k]' = c("video\nof you", "organizations/groups\nyou belong to",  "date\nof birth")
 names$pial6 = c("real name", "assoc name", "w/o revealing\nwho you are")
 names$'pial7[a-d]' = c("temporary\nusername/email", "fake name", "misleading\ninformation", "off cookies")
 names$'pial7[e-h]' = c("clear hist", "service for\nanonymity", "encrypted\ncommunication", "avoid sites ask\nfor real name");
 names$'pial7[i-k]' = c("deleted/edited\npost", "ask someone delete\npost about you", "public computer\nbrowse anonymously")
 names$'pial8[a-d]' = c("family\nmembers", "certain\nfriends", "employer/supervisor/\ncoworkers", "site admin");
-names$'pial8[e-h]' = c("hackers/criminals", "law enf", "people criticize/\nharass/target you", "comp want pay\non your DL")
+names$'pial8[e-h]' = c("hackers/criminals", "law enforcers", "people criticize/\nharass/target you", "comp want pay\non your DL")
 names$'pial8[i-k]' = c("people from\nyour past", "advertisers", "government")
 legendNames = c("yes", "no", "doesn't apply", "not sure", "refused");
+mainLabels = namesToPlot;
+mainLabels$'pial1[a-d]' = "Which information about you is available on the\ninternet for others to see?"
+mainLabels$'pial1[e-h]' = mainLabels$'pial1[a-d]';
+mainLabels$'pial1[i-k]' = mainLabels$'pial1[a-d]';
+mainLabels$'pial7[a-d]' = "While using the internet, have you ever done\nany of the following?";
+mainLabels$'pial7[e-h]' = mainLabels$'pial7[a-d]';
+mainLabels$'pial7[i-k]' = mainLabels$'pial7[a-d]';
+mainLabels$'pial8[a-d]' = "Have you ever tried to use the internet in ways that keep the following\nfrom being able to see what you have read/watched/posted online?";
+mainLabels$'pial8[e-h]' = mainLabels$'pial8[a-d]';
+mainLabels$'pial8[i-k]' = mainLabels$'pial8[a-d]';
 for(i in namesToPlot) {
-    data.frequency[[i]] = createPlotAndGetFrequency(data, namePattern=i, choices=c(1,2,3,8,9), legendNames=legendNames, names=names[[i]]);
+    data.frequency[[i]] = createPlotAndGetFrequency(data, namePattern=i, choices=c(1,2,3,8,9), legendNames=legendNames, names=names[[i]], main=mainLabels[[i]]);
 }
 
 namesToPlot = c("pial5", "pial4", "pial2", "pial9[a-d]", "pial9[e-g]", "pial9[h-j]", "pial11[a-d]", "pial11[e-h]", "pial13");
@@ -112,14 +126,21 @@ names$'pial9[e-g]' = c("delete comment\nof others", "ask someone remove\ninfo ab
 names$'pial9[h-j]' = c("ignore/refuse\nfriend request", "block/unfriend\nsomeone", "delete something\nyou posted (past)");
 names$'pial11[a-d]' = c("important personal\ninfo stolen", "account compromised\nw/o permission", "victim of online\nscam; lost money", "stalked/harassed\n online");
 names$'pial11[e-h]' = c("lost job/educ\nbec of your post", "rel problem bec\nof your post", "reputation damaged\n(from online activity)", "physical danger\nfrom online activity");
+mainLabels = namesToPlot;
+mainLabels$'pial9[a-d]' = "Do you ever do the following?"
+mainLabels$'pial9[e-g]' = mainLabels$'pial9[a-d]';
+mainLabels$'pial9[e-g]' = mainLabels$'pial9[a-d]';
+mainLabels$'pial9[e-g]' = mainLabels$'pial9[a-d]';
+mainLabels$'pial11[a-d]' = "Have you ever experience any of the following as a result of your online activities?"
+mainLabels$'pial11[e-h]' = mainLabels$'pial11[a-d]'
 legendNames = c("yes", "no", "not sure", "refused");
 for(i in namesToPlot) {
-    data.frequency[[i]] = createPlotAndGetFrequency(data, namePattern=i, choices=generalChoices, names=names[[i]], legendNames=legendNames);
+    data.frequency[[i]] = createPlotAndGetFrequency(data, namePattern=i, choices=generalChoices, names=names[[i]], legendNames=legendNames, main=mainLabels[[i]]);
 }
 
 names$pial10 = c("very\neasy", "somewhat\neasy", "not\ntoo easy", "almost\nimpossible", "not\nsure", "refused");
 data.frequency$pial10 = getFrequencyPercentageOfSequence(data=data$pial10, sequence=c(1,2,3,4,8,9));
-saveBarplot(data=data.frequency$pial10, filename="pial10", main="pial10", names = names$pial10);
+saveBarplot(data=data.frequency$pial10, filename="pial10", names = names$pial10, main="How easy do you think would be for\ncompanies to find out who you are\neven if you didn't use your real name?");
 
 names$pial12 = c("reasonable\nprotection", "not good\nenough", "not\nsure", "refused");
 data.frequency$pial12 = getFrequencyPercentageOfSequence(data=data$pial12, sequence=c(1,2,8,9));
